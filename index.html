@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop 5</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Workshop 5: Smart Forms</h1>
+    <hr />
+
+    <h2>Exercise 1: Contact Form</h2>
+    <form id="contactForm">
+        <label>Email address:<br>
+            <input type="text" name="email" id="email">
+        </label>
+        <span id="emailError" class="error-message"></span><br>
+        <label>Comment:<br>
+            <textarea name="comment" id="comment"></textarea>
+        </label>
+        <span id="commentError" class="error-message"></span><br>
+        <input type="submit" value="Send">
+    </form>
+
+    <hr/>
+
+    <h2>Exercise 2: Membership Calculator</h2>
+    <form id="membershipForm">
+        <label>Type
+            <select name="type" id="type">
+                <option value="basic">Basic - €10</option>
+                <option value="premium">Premium - €15</option>
+                <option value="gold">Gold - €20</option>
+                <option value="platinum">Platinum - €25</option>
+            </select>
+        </label><br>
+        <label>Years
+            <input type="number" name="years" id="years" min="1">
+        </label><br>
+        <span id="discountMessage" class="error-message"></span><br>
+        <label>Cost
+            <input type="text" name="cost" id="cost" readonly>
+        </label><br>
+        <input type="submit" value="Calculate">
+    </form>
+
+    <hr/>
+
+    <h2>Exercise 3: Book Order</h2>
+    <form id="bookOrderForm">
+        <label>Quantity
+            <input type="number" name="quantity" id="quantity" min="1">
+        </label><br>
+        <label>Price Per Unit
+            <input type="number" name="price" id="price" step="0.01">
+        </label><br>
+        <label>VAT (%)
+            <input type="number" name="tax" id="tax" step="0.01">
+        </label><br>
+        <label>Discount
+            <input type="number" name="discount" id="discount" step="0.01">
+        </label><br>
+        <label>Shipping Cost
+            <input type="number" name="shipping" id="shipping" step="0.01">
+        </label><br>
+        <label>Total
+            <input type="text" name="total" id="total" readonly>
+        </label><br>
+        <input type="submit" value="Calculate">
+    </form>
+
+    <hr/>
+
+    <h2>Exercise 4: Hidden Extra Fields</h2>
+    <form>
+        <label>Preferred Contact Method
+            <select id="contactMethod">
+                <option value="">-- Select --</option>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="sms">SMS</option>
+            </select>
+        </label><br>
+        <div id="extraContactField"></div>
+    </form>
+</body>
+</html>
